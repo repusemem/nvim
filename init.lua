@@ -1,3 +1,8 @@
+if vim.g.vscode then
+    require("config.vscode")
+    return
+end
+
 require('supermeme')
 
 -- Bootstrap lazy.nvim
