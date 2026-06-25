@@ -24,6 +24,6 @@ end, { desc = "Live grep" })
 
 vim.keymap.set({"v", "n", "i"}, "<C-b>", ":NvimTreeToggle<CR>")
 
-vim.keymap.set("n", "<leader>me", ":RenderMarkdown enable<CR>")
-vim.keymap.set("n", "<leader>md", ":RenderMarkdown disable<CR>")
+vim.keymap.set("n", "<leader>mde", ":RenderMarkdown enable<CR>")
+vim.keymap.set("n", "<leader>mdd", ":RenderMarkdown disable<CR>")
 vim.keymap.set({"v", "n"}, "<leader>cm", ":CommentToggle<CR>")
