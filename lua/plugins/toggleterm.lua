@@ -41,7 +41,7 @@ return {
 
         local function run_python_file()
             vim.cmd("wa")
-            local file = vim.fn.expand("%")
+            local file = vim.fn.shellescape(vim.fn.expand("%:p"))
             local cmd = "clear && python -u " .. file
 
             require("toggleterm").exec(cmd, 1, 12, nil, "horizontal", "python_runner", false)

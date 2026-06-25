@@ -14,8 +14,14 @@ vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
 vim.opt.clipboard = 'unnamedplus'
 
-vim.keymap.set("n", "<C-p>", ":Telescope  find_files<CR>")
-vim.keymap.set("n", "<C-f>", ":Telescope  live_grep<CR>")
+vim.keymap.set("n", "<C-p>", function()
+  require("fzf-lua").files()
+end, { desc = "Find files" })
+
+vim.keymap.set("n", "<C-f>", function()
+  require("fzf-lua").live_grep()
+end, { desc = "Live grep" })
+
 vim.keymap.set({"v", "n", "i"}, "<C-b>", ":NvimTreeToggle<CR>")
 
 vim.keymap.set("n", "<leader>md", ":MarkdownPreviewToggle<CR>")
